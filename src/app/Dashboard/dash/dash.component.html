@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Pastelesca</h3>
+        </div>
+
+        <ul class="list-unstyled components" id="menu">
+            <p>Calvillo, Aguascalientes</p>
+            <li>
+                <a routerLink="Home">Inicio</a>
+                
+            </li>
+            <li>
+                <a routerLink="Inventario">Inventario</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-bs-toggle">Materiales</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu" data-bs-parent="#menu">
+                    <li>
+                        <a routerLink="Compra">Compras</a>
+                    </li>
+                    <li>
+                        <a routerLink="Proveedores">Provedores</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a routerLink="Pedidos">Pedidos</a>
+            </li>
+            <li>
+                <a routerLink="Nomina">Nominas</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="col py-3">
+        <router-outlet></router-outlet>
+    </div>
+</div>
