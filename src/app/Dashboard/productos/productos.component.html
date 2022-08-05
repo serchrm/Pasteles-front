@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-outline-primary addbutton" (click)="agregar()">Agregar producto</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table id="data" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Sabor</th>
+                        <th scope="col">Tamaño</th>
+                        <th scope="col">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let aux of productos">
+                        <td>{{aux.descripcion }}</td>
+                        <td>{{aux.sabor | uppercase}}</td>
+                        <td>{{aux.tamanio}}</td>
+                        <td>{{aux.precio | currency:'$'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

@@ -1,18 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { InventarioResponse } from '../Interfaces/interfaces';
+import { login } from '../Interfaces/interfaces';
 import { ComunicacionService } from './comunicacion.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class InventarioService {
+export class LoginService {
 
   constructor(private Comuni:ComunicacionService,
               private http:HttpClient) { }
 
-  getInventario(jwt:String):Observable<InventarioResponse>{
-    return this.http.post<InventarioResponse>(`${this.Comuni.getURL()}inventario`,{jwt:jwt});
+  login(email:String,contrasenia:String):Observable<login>{
+    return this.http.post<login>(`${this.Comuni.getURL()}empleados/login`,{nombre:email,pass:contrasenia})
   }
 }

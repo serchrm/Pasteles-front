@@ -1,1 +1,21 @@
-<p>compra works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-outline-primary addbutton" (click)="agregar()">Agregar compra</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3" *ngFor="let aux of compras">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{aux.articulo | uppercase}}</h5>
+                    <p class="card-subtitle mb-1 text-muted">Descripcion: {{aux.descripcion}}</p>
+                    <p class="card-subtitle mb-1 text-muted">Fecha: {{aux.fecha}}</p>
+                    <p class="card-subtitle mb-1 text-muted">Precio: {{aux.precio}}</p>
+                    <p class="card-subtitle mb-1 text-muted">Cantidad: {{aux.cantidad}}</p>
+                    <p class="card-subtitle mb-1 text-muted">Total: {{aux.precio*aux.cantidad | currency:'$'}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

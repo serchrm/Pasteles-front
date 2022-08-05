@@ -1,7 +1,18 @@
-<div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-outline-primary addbutton" (click)="agregar()">Agregar pedido</button>
     </div>
   </div>
+  <div class="row">
+    <div class="col-3" *ngFor="let aux of pedidos">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{aux.cliente}}</h5>
+          <p class="card-subtitle mb-1 text-muted">Fecha y hora: {{aux.fechaHora}}</p>
+          <button href="#" class="btn btn-outline-primary">Detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

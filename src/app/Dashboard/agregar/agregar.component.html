@@ -1,0 +1,118 @@
+<div class="container-fluid">
+    <div class="empleados" [hidden]="empleados">
+        <div class="form-group">
+            <label for="nombre">Cliente:</label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="emp.nombre">
+        </div>
+        <div class="form-group">
+            <label for="puesto">Puesto:</label>
+            <select class="form-control" id="puesto" [(ngModel)]="emp.puesto">
+                <option value="Cajero">Cajero</option>
+                <option value="Decorador">Decorador</option>
+                <option value="Repartidor">Repartidor</option>
+                <option value="Publicista">Publicista</option>
+                <option value="Pastelero">Pastelero</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Telefono:</label>
+            <input type="tel" class="form-control" id="telefono" [(ngModel)]="emp.telefono">
+        </div>
+        <div class="form-group">
+            <label for="contrasenia">Relleno:</label>
+            <input type="text" class="form-control" id="contrasenia" [(ngModel)]="emp.contrasenia">
+        </div>
+        <div class="form-group">
+            <label for="contrasenia">Descripcion:</label>
+            <input type="text" class="form-control" id="contrasenia" [(ngModel)]="sueldo">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="addEmpleado()">Guardar</button>
+    </div>
+    <div class="pedidos" [hidden]="pedidos">
+        <div class="form-group">
+            <label for="nombre">Cliente:</label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="pedi.cliente">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Fecha y Hora:</label>
+            <input type="datetime-local" class="form-control" id="telefono" [(ngModel)]="pedi.fechaHora">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Telefono:</label>
+            <input type="tel" class="form-control" id="telefono" [(ngModel)]="pedi.telefono">
+        </div>
+        <div class="form-group">
+            <label for="puesto">Relleno:</label>
+            <select class="form-control" id="puesto" [(ngModel)]="pedi.relleno">
+                <option value="Chantilly">Chantilly</option>
+                <option value="Fruta">Fruta</option>
+                <option value="Mermelada">Mermelada</option>
+                <option value="Chocolate">Chocolate</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Descripcion:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="pedi.descripcion"></textarea>
+          </div>
+        <button type="submit" class="btn btn-primary" (click)="addPedido()">Guardar</button>
+    </div>
+    <div class="productos" [hidden]="productos">
+        <div class="form-group">
+            <label for="nombre">Precio:</label>
+            <input type="text" class="form-control" id="precio" [(ngModel)]="produ.precio">
+        </div>
+        <div class="form-group">
+            <label for="puesto">Sabor:</label>
+            <select class="form-control" id="sabor" [(ngModel)]="produ.sabor">
+                <option value="Chocolate">Chocolate</option>
+                <option value="Vainilla">Vainilla</option>
+                <option value="Marmoleado">Marmoleado</option>
+                <option value="Imposible/Chocoflan">Imposible/Chocoflan</option>
+                <option value="Cafe">Cafe</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Tamaño:</label>
+            <input type="text" class="form-control" id="tamanio" [(ngModel)]="produ.tamanio">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Descripcion:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="produ.descripcion"></textarea>
+          </div>
+        <button type="submit" class="btn btn-primary" (click)="addProducto()">Guardar</button>
+    </div>
+    <div class="compras" [hidden]="compras">
+        <div class="form-group">
+            <label for="nombre">Articulo:</label>
+            <input type="text" class="form-control" id="precio" [(ngModel)]="comp.articulo">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Precio:</label>
+            <input type="number" class="form-control" id="tamanio" [(ngModel)]="comp.precio">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Cantidad:</label>
+            <input type="number" class="form-control" id="tamanio" [(ngModel)]="comp.cantidad">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Fecha:</label>
+            <input type="date" class="form-control" id="tamanio" [(ngModel)]="comp.fecha">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Descripcion:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="comp.descripcion"></textarea>
+          </div>
+        <button type="submit" class="btn btn-primary" (click)="addCompra()">Guardar</button>
+    </div>
+    <div class="proveedores" [hidden]="proveedores">
+        <div class="form-group">
+            <label for="nombre">Empresa/Proveedor:</label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="provee.empresa">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Telefono:</label>
+            <input type="tel" class="form-control" id="telefono" [(ngModel)]="provee.telefono">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="addProveedor()">Guardar</button>
+    </div>
+</div>

@@ -1,1 +1,37 @@
-<p>empleados works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-outline-primary addbutton" (click)="agregar()">Agregar empleado</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-outline-primary addbutton" (click)="exportEXCEL()">Generar reporte</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table id="data" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Puesto</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Salario</th>
+                        <th scope="col">ISR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let aux of empleados">
+                        <td>{{aux.nombre | uppercase}}</td>
+                        <td>{{aux.puesto | uppercase}}</td>
+                        <td>{{aux.telefono}}</td>
+                        <td>{{aux.Salida.sueldo | currency:'$'}}</td>
+                        <td>{{aux.Salida.isr*aux.Salida.sueldo | currency:'$'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

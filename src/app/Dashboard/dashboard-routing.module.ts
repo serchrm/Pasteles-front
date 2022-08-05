@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AgregarComponent } from './agregar/agregar.component';
 import { CompraComponent } from './compra/compra.component';
 import { DashComponent } from './dash/dash.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
@@ -8,6 +9,7 @@ import { InventarioComponent } from './inventario/inventario.component';
 import { NominaComponent } from './nomina/nomina.component';
 import { PagosComponent } from './pagos/pagos.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
+import { ProductosComponent } from './productos/productos.component';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 
 const routes: Routes = [
@@ -39,6 +41,12 @@ const routes: Routes = [
     },
     {
       path:"Nomina",component:NominaComponent,
+    },
+    {
+      path:"Agregar",component:AgregarComponent
+    },
+    {
+      path:"Productos",component:ProductosComponent
     }
   ]
   }

@@ -1,0 +1,16 @@
+.card{
+    width: auto;
+    height: 6rem;
+    margin-bottom: 1em;
+}
+
+.card:hover{
+    background-color: rgba(61, 181, 136,0.2);
+    transform: scale(1.1);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+}
+
+.addbutton{
+    width: 100%;
+    margin-bottom: 1em;
+}

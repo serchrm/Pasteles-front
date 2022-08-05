@@ -1,11 +1,14 @@
 <div class="container-fluid">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="row">
+        <div class="col-3" *ngFor="let aux of inventario">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{aux.materia | uppercase}}</h5>
+                    <p class="card-subtitle mb-1 text-muted">Stock: {{aux.cantidad}}</p>
+                    <p class="card-subtitle mb-1 text-muted">Caducidad: {{aux.fechaCaducidad}}</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+

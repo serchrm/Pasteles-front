@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashComponent } from './dash/dash.component';
@@ -11,6 +12,8 @@ import { PagosComponent } from './pagos/pagos.component';
 import { CompraComponent } from './compra/compra.component';
 import { InventarioComponent } from './inventario/inventario.component';
 import { NominaComponent } from './nomina/nomina.component';
+import { AgregarComponent } from './agregar/agregar.component';
+import { ProductosComponent } from './productos/productos.component';
 
 
 @NgModule({
@@ -23,11 +26,14 @@ import { NominaComponent } from './nomina/nomina.component';
     PagosComponent,
     CompraComponent,
     InventarioComponent,
-    NominaComponent
+    NominaComponent,
+    AgregarComponent,
+    ProductosComponent
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    FormsModule
   ]
 })
 export class DashboardModule { }
